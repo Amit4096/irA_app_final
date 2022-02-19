@@ -1,0 +1,93 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+
+class ThankYouPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          padding: const EdgeInsets.only(top: 18, left: 10, right: 10),
+          child: Column(
+            children: [
+              Center(
+                child: Container(
+                    child: Column(children: [
+                  Text("Thank You", style: GoogleFonts.poppins(fontSize: 40)),
+                  Text("Members will reach soon for food",
+                      style: GoogleFonts.poppins(fontSize: 20))
+                ])),
+              ),
+              Center(
+                child: Container(
+                  child: Column(children: [
+                    Image.asset('images/namaste.gif'),
+                  ]),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
+                  ),
+                  width: size.width,
+                  child: Column(
+                    children: [
+                      SizedBox(height: 10),
+                      Text(
+                        "This QR Code is for Our Member to Scan",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      QrImage(
+                        data: "1234567890",
+                        version: QrVersions.auto,
+                        size: size.width * 0.4,
+                        backgroundColor: Colors.white,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      floatingActionButton: _BackButton(),
+    );
+  }
+}
+
+class _BackButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.white,
+          // shape: BoxShape.circle,
+          borderRadius: BorderRadius.circular(60)),
+      width: 60,
+      height: 60,
+      child: IconButton(
+        icon: Icon(
+          Icons.arrow_back,
+          color: Colors.black,
+          size: 40,
+        ),
+        enableFeedback: true,
+        onPressed: () {
+          Navigator.popUntil(context, (route) => route.isFirst);
+        },
+      ),
+    );
+  }
+}

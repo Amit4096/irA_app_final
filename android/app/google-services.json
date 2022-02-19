@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "963762279699",
+    "project_id": "o-o-74179",
+    "storage_bucket": "o-o-74179.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963762279699:android:d4c76372e66aa92f96b6e6",
+        "android_client_info": {
+          "package_name": "com.irA.fllutter_firabase_form"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963762279699-6ljfiijvt3t25tnki9eg0r8fot8jdd9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXQ1MwXd2tHbqOBKPbR-c2YrHKRA4vR98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963762279699-6ljfiijvt3t25tnki9eg0r8fot8jdd9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
